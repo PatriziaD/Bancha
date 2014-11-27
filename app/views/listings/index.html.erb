@@ -1,6 +1,15 @@
-<h1>Listing listings</h1>
+<div class= "thumbnail">
+  <%= image_tag "https://s3-eu-west-1.amazonaws.com/bancha/logo.png" %>
+</div>
+<div class="jumbotron">
+  <h2>Meet locals to share<br>
+    houses, interesting tours and funny experiences</h2>
+  <h3>The best way to manage your travel<br>
+    for leisure, religious, health or business purposes</h3>
+</div>
+</div>
 
-<table>
+<table class="table table-hover table-condensed">
   <thead>
     <tr>
       <th>Name</th>
@@ -15,7 +24,7 @@
       <tr>
         <td><%= listing.name %></td>
         <td><%= listing.description %></td>
-        <td><%= listing.price %></td>
+        <td><%= number_to_currency(listing.price) %></td>
         <td><%= link_to 'Show', listing, class: "btn btn-link" %></td>
         <td><%= link_to 'Edit', edit_listing_path(listing), class: "btn btn-link" %></td>
         <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
