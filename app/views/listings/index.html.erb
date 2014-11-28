@@ -18,8 +18,6 @@
   </thead>
 
   
-
-  
 <div class="center">
   <div class="row">
     <% @listings.each do |listing| %>
@@ -37,10 +35,10 @@
     <% end %>
   </div>
 </div>
-</table>
+
 
 <br>
 
 <% if user_signed_in? %>
-<%= link_to 'New Listing', new_listing_path, class: "btn btn-link" %>
+<%= link_to 'New Listing', new_listing_path, class: "btn btn-link", data: { no_turbolink: true } %>
 <% end %>
